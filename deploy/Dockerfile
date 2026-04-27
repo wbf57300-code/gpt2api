@@ -1,7 +1,6 @@
-# Zeabur 专属适配版
+# 专为 gpt2api 项目 + Zeabur 定制
 FROM golang:1.21-alpine
 WORKDIR /app
 COPY . .
-# 核心修复：创建bin目录+编译
 RUN mkdir -p bin && go build -o ./bin/server
 CMD ["./bin/server"]
